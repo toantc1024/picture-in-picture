@@ -10,6 +10,7 @@ const selectMediaStream = async () => {
         videoElement.srcObject = mediaStream;
         videoElement.onloadedmetadata = () => {
             videoElement.play();
+            instructor.textContent = 'Hint: click Start button to show picture-in-picture';
             instructor.removeAttribute('hidden');
         }
     } catch (err) {
@@ -22,11 +23,16 @@ const selectMediaStream = async () => {
 
 button.addEventListener('click', async () => {
     // Disable Button 
-    button.disabled = true;
-    // Start Picture-in-Picture
-    await videoElement.requestPictureInPicture();
-    // Reset the Button
-    button.disabled = false;
+    if(!video.srcObject) {
+        instructor.textContent = 'Please select screen';
+        instructor.removeAttribute('hidden');
+    } else {
+        button.disabled = true;
+        // Start Picture-in-Picture
+        await videoElement.requestPictureInPicture();
+        // Reset the Button
+        button.disabled = false;
+    }
 });
 
 selectScreen.addEventListener('click', selectMediaStream);
