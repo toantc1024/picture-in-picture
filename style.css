@@ -1,7 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&display=swap');
+
 html {
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
- }
+/* CSS */
+.button-4 {
+  appearance: none;
+  box-shadow: 5px 5px black;
+  background-color: #FAFBFC;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 6px;
+  /* box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset; */
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 20px 50px;
+  position: relative;
+  font-family: 'Barrlow', -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-4:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.button-4:active {
+  background-color: #EDEFF2;
+  /* box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset; */
+  transition: none 0s;
+}
+
+.button-4:focus {
+  outline: 1px transparent;
+}
+
+/* .button-4:before {
+  display: none;
+} */
+
+.button-4:-webkit-details-marker {
+  display: none;
+}
+
+
+.button-container {
+    display: flex;
+    flex-flow: wrap column;
+    gap: 10px;
+    font-family: 'Barrlow', -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    justify-content: center;
+    text-align: center;
+}
+
+#menu {
+    display: flex;
+    gap: 10px;
+}
+
+video {
+    border-radius: 5px;
+}
